@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "parselmouth"
+version = "0.1.0"
+description = "A CLI tool to process documents and analyze them with Gemini."
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+packages = [{include = "parselmouth"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+click = "^8.1.7"
+google-generativeai = "^0.8.3"
+pydantic = "^2.10.3"
+pydantic-settings = "^2.6.1"
+pyyaml = "^6.0.2"
+pypdf = "^6.4.0"
+
+[tool.poetry.scripts]
+parselmouth = "parselmouth.cli:cli"
+
+[tool.poetry.group.dev.dependencies]
+reportlab = "^4.4.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
